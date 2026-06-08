@@ -7,6 +7,7 @@ use autodie;
 use Env qw(HOME);
 use Term::ANSIColor;
 use File::Basename;
+use File::Path qw(make_path);
 use Cwd 'abs_path';
 
 my ($file, $directory, $extension) = fileparse(__FILE__);
@@ -19,6 +20,7 @@ my @fileList = (
     ["$directory/tmux/tmux.conf", "$HOME/.tmux.conf"],
     ["$directory/tmux/tmux", "$HOME/.tmux"],
     ["$directory/gitconfig", "$HOME/.gitconfig"],
+    ["$directory/codex/global_agents.md", "$HOME/.codex/AGENTS.md"],
 	# ["$directory/zed/settings.json", "$HOME/.config/zed/settings.json"],
 	# ["$directory/zed/keymap.json", "$HOME/.config/zed/keymap.json"],
 	["$directory/ghostty", "$HOME/.config/ghostty"],
@@ -47,7 +49,7 @@ if ("yes" ne $userResponse) {
 my $exitCode = 0;
 for my $f (@fileList) {
     my ($source, $destination) = @$f;
-    if (-e $destination) {
+    if (-e $destination || -l $destination) {
         my $unlinkedCount = unlink $destination;
         if ($unlinkedCount != 1) {
             print color("bold red");
@@ -57,6 +59,12 @@ for my $f (@fileList) {
         }
         print color("white");
         print "Successfully unlinked $destination.\n";
+    }
+    my $destinationDirectory = dirname($destination);
+    if (!-d $destinationDirectory) {
+        make_path($destinationDirectory);
+        print color("white");
+        print "Successfully created $destinationDirectory.\n";
     }
     my $success = symlink $source, $destination;
     if ($success != 1) {
