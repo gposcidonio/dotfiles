@@ -25,5 +25,8 @@ vimcmd_visual_symbol = "[<|<|<|](bold yellow)"
 [git_branch]
 style = "green"
 
+[git_status]
+use_git_executable = true
+
 [hostname]
 style = "cyan"
