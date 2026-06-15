@@ -1,9 +1,16 @@
-function wt --description 'Create a git worktree, initialize submodules, and open it in tmux'
+function wt --description 'Create a git worktree and open it in tmux'
+    argparse -n wt init-submodules -- $argv; or return 1
+
+    set -l init_submodules false
+    if set -q _flag_init_submodules
+        set init_submodules true
+    end
+
     set -l name $argv[1]
     set -l base $argv[2]
 
     if test -z "$name"
-        echo "usage: wt <name> [base]"
+        echo "usage: wt [--init-submodules] <name> [base]"
         return 1
     end
 
@@ -51,7 +58,7 @@ function wt --description 'Create a git worktree, initialize submodules, and ope
 
     git -C "$repo_root" worktree add -b "$name" "$target" "$base"; or return 1
 
-    if test -f "$target/.gitmodules"
+    if test "$init_submodules" = true; and test -f "$target/.gitmodules"
         git -C "$target" submodule update --init --recursive; or return 1
     end
 
