@@ -59,7 +59,7 @@
 [pull]
 	rebase = false
 
-[includeIf "gitdir:/Users/umbreon/"]
+[includeIf "gitdir:/Users/honedge/"]
     path = "~/dotfiles/work_specific/gitconfig"
 
 [commit]
