@@ -20,6 +20,7 @@ my @fileList = (
     ["$directory/tmux/tmux.conf", "$HOME/.tmux.conf"],
     ["$directory/tmux/tmux", "$HOME/.tmux"],
     ["$directory/gitconfig", "$HOME/.gitconfig"],
+    ["$directory/jjconfig.toml", "$HOME/.config/jj/config.toml"],
     ["$directory/codex/global_agents.md", "$HOME/.codex/AGENTS.md"],
 	# ["$directory/zed/settings.json", "$HOME/.config/zed/settings.json"],
 	# ["$directory/zed/keymap.json", "$HOME/.config/zed/keymap.json"],
