@@ -50,6 +50,7 @@ __generate_config_edit_function efish   '~/.config/fish/config.fish'
 __generate_config_edit_function efunc   "$FISH_FUNC_DIR"
 __generate_config_edit_function etmux   '~/.tmux.conf'
 __generate_config_edit_function egit    '~/.gitconfig'
+__generate_config_edit_function ejj     '~/.config/jj/config.toml'
 __generate_config_edit_function essh    '~/.ssh/config'
 __generate_config_edit_function estar   '~/.config/starship.toml'
 __generate_config_edit_function eghost  '~/.config/ghostty/config'
