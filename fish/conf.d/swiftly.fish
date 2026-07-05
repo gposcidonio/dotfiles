@@ -1,2 +1,2 @@
 # Added by swiftly
-source "/Users/honedge/.swiftly/env.fish"
+source "$HOME/.swiftly/env.fish"
