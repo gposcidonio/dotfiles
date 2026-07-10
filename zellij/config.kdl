@@ -200,7 +200,7 @@ ui {
 // through to the shell.
 default_mode "normal"
 
-theme "blade"
+theme "badwolf"
 
 // Stack panes when they are resized past a threshold (needed for the S
 // stacked-pane workflow to feel right). Default is already true; set here so
