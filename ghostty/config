@@ -6,7 +6,7 @@ shell-integration = fish
 shell-integration-features = no-title
 
 # Appearance Settings
-theme = blade
+theme = badwolf
 
 # Window Settings
 
