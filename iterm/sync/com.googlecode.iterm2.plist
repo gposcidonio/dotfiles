@@ -1157,16 +1157,20 @@
 	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideActivityIndicator</key>
+	<false/>
+	<key>HideMenuBarInFullscreen</key>
+	<true/>
 	<key>HideScrollbar</key>
 	<true/>
 	<key>HideTab</key>
+	<true/>
+	<key>HideTabNumber</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>LanguageAgnosticKeyBindings</key>
 	<false/>
-	<key>Leader</key>
-	<string>0x20-0x40000-0x31</string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1179,7 +1183,9 @@
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Animate Movement</key>
-			<true/>
+			<false/>
+			<key>Animate Movement Only in Interactive Apps</key>
+			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1430,6 +1436,8 @@
 			<string></string>
 			<key>Badge Top Margin</key>
 			<real>10</real>
+			<key>Blink Allowed</key>
+			<true/>
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
@@ -1483,6 +1491,10 @@
 				<key>Red Component</key>
 				<real>0.70213186740875244</real>
 			</dict>
+			<key>Cursor Hidden When Unfocused</key>
+			<false/>
+			<key>Cursor Shadow</key>
+			<false/>
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1496,6 +1508,8 @@
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Cursor Type</key>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -1570,7 +1584,7 @@
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Open Password Manager Automatically</key>
-			<true/>
+			<false/>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -1616,7 +1630,7 @@
 			<key>Shortcut</key>
 			<string></string>
 			<key>Show Status Bar</key>
-			<true/>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Status Bar Layout</key>
@@ -1798,10 +1812,16 @@
 	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
-	<key>ShowPaneTitles</key>
+	<key>ShowFullScreenTabBar</key>
 	<true/>
+	<key>ShowNewOutputIndicator</key>
+	<true/>
+	<key>ShowPaneTitles</key>
+	<false/>
 	<key>ShowPaneTitlesEvenIfOnlyOnePane</key>
 	<true/>
+	<key>ShowSecureKeyboardEntryIndicator</key>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1816,10 +1836,14 @@
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
+	<key>TabsHaveCloseButton</key>
+	<true/>
 	<key>TerminalVMargin</key>
 	<integer>2</integer>
 	<key>TmuxUsesDedicatedProfile</key>
 	<false/>
+	<key>UseRecommendedAIModel</key>
+	<true/>
 	<key>UseVirtualKeyCodesForDetectingDigits</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>

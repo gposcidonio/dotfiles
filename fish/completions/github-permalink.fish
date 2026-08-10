@@ -1,5 +1,5 @@
 # A function which filters options which starts with "-" from $argv.
-function _swift_iosd_preprocessor
+function _swift_github-permalink_preprocessor
     set -l results
     for i in (seq (count $argv))
         switch (echo $argv[$i] | string sub -l 1)
@@ -10,8 +10,8 @@ function _swift_iosd_preprocessor
     end
 end
 
-function _swift_iosd_using_command
-    set -l currentCommands (_swift_iosd_preprocessor (commandline -opc))
+function _swift_github-permalink_using_command
+    set -l currentCommands (_swift_github-permalink_preprocessor (commandline -opc))
     set -l expectedCommands (string split " " $argv[1])
     set -l subcommands (string split " " $argv[2])
     if [ (count $currentCommands) -ge (count $expectedCommands) ]
@@ -35,7 +35,4 @@ function _swift_iosd_using_command
     return 1
 end
 
-complete -c iosd -n '_swift_iosd_using_command "iosd nuke-derived-data"' -s h -l help -d 'Show help information.'
-complete -c iosd -n '_swift_iosd_using_command "iosd" "nuke-derived-data help"' -s h -l help -d 'Show help information.'
-complete -c iosd -n '_swift_iosd_using_command "iosd" "nuke-derived-data help"' -f -a 'nuke-derived-data' -d 'Forcefully deletes the derived data directory where Xcode stores many intermediate products.'
-complete -c iosd -n '_swift_iosd_using_command "iosd" "nuke-derived-data help"' -f -a 'help' -d 'Show subcommand help information.'
+complete -c github-permalink -n '_swift_github-permalink_using_command "github-permalink"' -s h -l help -d 'Show help information.'
